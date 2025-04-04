@@ -2,6 +2,7 @@
 import Navigate from "./Navigate"
 import { Outlet } from "react-router-dom";
 import "./allItems.css"
+import Footer from "../Footer/Footer";
 
 const Categories = () => {
  
@@ -10,6 +11,7 @@ const Categories = () => {
       {/* <AllCategoriesItems /> */}
       <Navigate />
       <Outlet />
+      <Footer />
     </div>
   )
 }
