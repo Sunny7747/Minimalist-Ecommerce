@@ -1,0 +1,111 @@
+/* Navigate.css */
+.navigate-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Title Container (Home link and Title) */
+.title-container {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 3rem 0;
+}
+.title-container .title{
+    margin: 0 auto;
+}
+
+.home-btn a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.home-btn a svg {
+    margin-right: 5px;
+}
+
+.title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Buttons Container */
+.all-btns-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.all-btns-container a {
+    text-decoration: none;
+}
+
+.all-btns-container button {
+    background: none;
+    border: 2px solid #ccc;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.all-btns-container button:hover {
+    border: 2px solid #000000;
+}
+
+.all-btns-container button.active {
+    background-color: #e0e0e0;
+    border-color: #999;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .title h1 {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .all-btns-container {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .all-btns-container button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigate-container {
+        padding: 10px;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+
+    .home-btn a {
+        font-size: 14px;
+    }
+
+    .all-btns-container button {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+}

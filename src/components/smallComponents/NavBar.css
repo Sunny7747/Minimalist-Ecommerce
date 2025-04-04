@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Blinker", sans-serif;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.navRapper{  
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5rem;
+    transition: 0.4s;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0px 4px 5px -5px rgba(0, 0, 0, 0.23);
+    background-color: #fff;
+}
+
+
+.logo span{
+    font-size: 2rem;
+    font-weight: 800;
+    transition: all ease-in 0.1s;
+    cursor: pointer;
+    color: #d8141447;
+}
+.navRapper span:hover{
+    color: #D81414;
+}
+.content{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.content p{
+    transition: all ease 0.2s;
+    color: black;
+
+}
+.content a {
+    text-decoration: none; /* Removes underline from the <Link> itself */
+}
+
+.content p:hover{
+    color: #D81414;
+    font-weight: 200;
+    cursor: pointer;
+}
+.cart{
+    position: relative;
+    right: 0;
+    padding: 5px;
+}
+#cartItems{
+    position:absolute;
+    border-radius: 50%;
+    background-color: #D81414;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    top: -10px;
+    right: -10px;
+    rotate: 10deg;
+}
+.hb, .closeHb{
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .navRapper{
+        padding: 30px 3rem;
+    }
+    .content{
+        width: 3rem;
+        display: flex;
+        justify-content: space-between  ;
+        align-items: center;
+    }
+    .cart{
+        font-size: 1.5rem;
+    }
+    .content p{
+        display: none;
+    }
+    .hb{
+        display: block;
+        font-size: 1.5rem;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 1050px) {
+  .content p{
+    font-size: 1.4rem;
+
+  }
+  .cart{
+    font-size: 1.5rem;
+    height: 23px;
+  }
+  }
+.cartRapperOn{
+    background-color: 	#E9EAEC;
+    position:absolute;
+    height: 100vh;
+    width: 40%;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    transition: all ease 0.3s;
+    
+}
+.cartRapperOut{
+    display: none;
+
+}
+.cartRapperIn{
+    display: flex;
+
+}
+.closeHb{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.yourShoppingCart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    width: 100%;
+}
+.emptyMessage{
+    margin: auto;
+    width: 35%;
+    overflow: hidden;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: auto; */
+}
+
+
+.yourShoppingCart .closeHb{
+    display: block;
+}
+.emptyCartRapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+.emptyCartRapper img{
+    width: 100%;
+}
+.emptyCartRapper button{
+    width: 100%;
+    height: 2.6rem;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+@media (max-width: 1050px) {
+    .cartRapperOn{
+        width: 55%;
+    }
+    .yourShoppingCart{
+        padding: 20px 40px;
+    }
+    .emptyMessage{
+        margin-top:10rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .cartRapperOn{
+        width: 100%;
+    }
+    .yourShoppingCart{
+        font-size: 0.8rem;
+    }
+    .closeHb{
+        padding-top: 5px;
+        
+    }
+    .emptyMessage{
+        width: 50%;
+    }
+}
+
+/* MOBILE NAV section */
+.mobileNavOn{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    font-size: 1.6rem;
+    transition: all ease 3s;
+}
+.mobileNavOff{
+    display: flex;
+}
+.mobileNavOn div{
+    margin-top: 95px;
+}
+@media (max-width: 450px) {
+    .mobileNavOn{
+        height: 100vh;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+

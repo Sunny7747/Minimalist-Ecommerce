@@ -1,0 +1,89 @@
+.gridContainer a {
+    display: contents;
+}
+
+.heroRapper {
+    max-width: 100%;
+    height: 85%;
+    background-color: aqua;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    /* padding: 10px 3rem; */
+}
+
+.gridContainer {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 260px 260px;
+}
+
+.featured {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    background: rgba(62, 62, 62, 0.67);
+}
+
+.featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.4; /* Initial opacity for the overlay */
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.featured:hover::before {
+    opacity: 0.3; /* Adjust the opacity on hover */
+}
+
+.featured img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index: 0; /* Ensure the image is below the overlay */
+}
+
+.mainDec {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.gridOne {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gridTwo {
+    grid-row: span 2;
+}
+@media (max-width: 1050px) {
+    .gridContainer{
+        grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 150px;
+    }
+    
+ }
+ @media (max-width: 768px) {
+    .gridContainer{
+        grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 100px;
+    }
+   .mainDec{
+    font-size: 1.2rem;
+   }
+ }

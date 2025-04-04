@@ -1,0 +1,71 @@
+.cardrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    width: 90%;
+    cursor: pointer;
+    /* height: 100%; */
+    transition: all ease 0.3s;
+}
+.cardrapper:hover{
+    border: 1px solid black;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.cardGridContainer{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow-x: scroll; 
+     overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    
+}
+.card{
+    padding: 0px 8px 5px 8px;
+    border: 1px solid #CBCBCB;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+.imgggg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.imgggg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.nameAndPrice{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nameAndPrice p{
+    font-size: 1.2rem;
+}
+.nameAndPrice h3{
+    font-size: 1.5rem;
+}
+@media (max-width: 750px) {
+    .cardGridContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+@media (max-width: 450px) {
+    .cardGridContainer {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+    .cardrapper{
+        padding-left: 30px;
+    }
+}
